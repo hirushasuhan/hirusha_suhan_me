@@ -9,7 +9,7 @@ import Image from "next/image"; // Add import
 
 const projects = [
     {
-        title: "visa consultation company website project",
+        title: "visa consultation company web project",
         description: "Created a visa consultation website using HTML, CSS, and JavaScript with features like appointment scheduling and visa eligibility checkers, improving client interaction and reducing response time by 40%..",
         tags: ["HTML", "CSS", "JavaScript"],
         links: {
@@ -20,7 +20,7 @@ const projects = [
         image: "/visa consultation.png"
     },
     {
-        title: "bus-management-system",
+        title: "Bus Management System",
         description: "A comprehensive Java-based application for the efficient management of public transportation fleets in Sri Lanka.The system demonstrates robust object-oriented principles, business logic, and integration with MySQL databases, providing a complete real-world solution.",
         tags: ["JAVA", "mySql", "OOP"],
         links: {
@@ -31,7 +31,7 @@ const projects = [
         image: "/bus-management-system.png"
     },
     {
-        title: "Expense-Tracker",
+        title: "Expense Tracker",
         description: "The Expense Tracker is a comprehensive Java-based financial management application designed to help you take control of your personal finances. Built with modern Object-Oriented Programming principles, this application provides an intuitive and powerful platform for tracking income, monitoring expenses, and generating detailed financial reports.",
         tags: ["JAVA", "OOP"],
         links: {

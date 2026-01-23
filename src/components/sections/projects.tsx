@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
+import Image from "next/image"; // Add import
+
 const projects = [
     {
         title: "visa consultation company website project",
@@ -14,7 +16,8 @@ const projects = [
             demo: "https://hirushasuhan.github.io/web-project-Visa-consultation-Company/",
             github: "https://github.com/hirushasuhan/web-project-Visa-consultation-Company"
         },
-        color: "from-cyan-500/20 to-blue-600/20"
+        color: "from-cyan-500/20 to-blue-600/20",
+        image: "/visa consultation.png"
     },
     {
         title: "bus-management-system",
@@ -24,7 +27,8 @@ const projects = [
             demo: "https://www.linkedin.com/posts/hirusha-suhan_java-mysql-oop-activity-7370892577698402306-Oxc5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4q4JYBRak-51f0DiMI7ctLvGcwYVv-jvI",
             github: "https://github.com/hirushasuhan/bus-management-system"
         },
-        color: "from-violet-500/20 to-purple-600/20"
+        color: "from-violet-500/20 to-purple-600/20",
+        image: "/bus-management-system.png"
     },
     {
         title: "Expense-Tracker",
@@ -34,7 +38,8 @@ const projects = [
             demo: "https://www.linkedin.com/posts/hirusha-suhan_expensetracker-java-oop-activity-7379905967729209345-42fw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD4q4JYBRak-51f0DiMI7ctLvGcwYVv-jvI",
             github: "https://github.com/hirushasuhan/Expense-Tracker"
         },
-        color: "from-emerald-500/20 to-teal-600/20"
+        color: "from-emerald-500/20 to-teal-600/20",
+        image: "/Expense-Tracker.png"
     },
     {
         title: "Other",
@@ -95,7 +100,16 @@ export function Projects() {
                                     </a>
                                 ) : (
                                     <Card className="group h-full flex flex-col overflow-hidden border-white/10 bg-white/5 p-0 hover:border-white/20">
-                                        <div className={`h-48 w-full bg-gradient-to-br ${project.color} group-hover:scale-105 transition-transform duration-500`} />
+                                        <div className={`relative h-48 w-full bg-gradient-to-br ${project.color} group-hover:scale-105 transition-transform duration-500`}>
+                                            {project.image && (
+                                                <Image
+                                                    src={project.image}
+                                                    alt={project.title}
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            )}
+                                        </div>
 
                                         <div className="flex flex-1 flex-col p-6">
                                             <h3 className="text-xl font-bold text-white">{project.title}</h3>

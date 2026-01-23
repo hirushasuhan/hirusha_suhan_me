@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { SocialIcon } from "@/components/ui/social-icon";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Link } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Contact() {
@@ -19,10 +19,28 @@ export function Contact() {
                         Interested in working together or just want to say hi?
                     </p>
 
-                    <div className="mt-8 flex justify-center gap-6">
-                        <Button size="lg" className="rounded-full px-8 text-lg" asChild>
+                    <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                        <Button
+                            size="lg"
+                            className="group relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-8 text-lg text-cyan-400 backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/20 hover:scale-105 w-full sm:w-auto"
+                            asChild
+                        >
                             <a href="mailto:hirushasuhan@outlook.com">
-                                <Mail className="mr-2 h-5 w-5" /> Say Hello
+                                <span className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
+                                <Mail className="mr-2 h-5 w-5 relative z-10" />
+                                <span className="relative z-10">Say Hello</span>
+                            </a>
+                        </Button>
+                        <Button
+                            variant="outline"
+                            size="lg"
+                            className="group relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-8 text-lg text-cyan-400 backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/20 hover:scale-105 w-full sm:w-auto"
+                            asChild
+                        >
+                            <a href="https://linktr.ee/hirusha.suhan" target="_blank" rel="noopener noreferrer">
+                                <span className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
+                                <Link className="mr-2 h-5 w-5 relative z-10" />
+                                <span className="relative z-10">Linktree</span>
                             </a>
                         </Button>
                     </div>

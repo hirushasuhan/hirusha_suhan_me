@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: "Portfolio of Hirusha Suhan - Frontend Developer, Designer & Tech Researcher.",
 };
 
+import { Navbar } from "@/components/layout/navbar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,6 +25,7 @@ export default function RootLayout({
           inter.variable
         )}
       >
+        <Navbar />
         {children}
       </body>
     </html>

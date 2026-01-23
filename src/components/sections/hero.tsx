@@ -5,9 +5,14 @@ import { Button } from "@/components/ui/button";
 import { SocialIcon } from "@/components/ui/social-icon";
 import { Github, Linkedin, Code2, Link as IconLink } from "lucide-react";
 
+import { MatrixRain } from "@/components/ui/matrix-rain";
+
 export function Hero() {
     return (
         <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center">
+            {/* Matrix Rain Background */}
+            <MatrixRain />
+
             {/* Background Gradient Blob */}
             <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-cyan-500/20 blur-[100px]" />
             <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-violet-500/10 blur-[100px]" />
@@ -38,6 +43,16 @@ export function Hero() {
                     <a href="#projects">
                         <Button size="lg" className="w-full sm:w-auto">
                             View My Work
+                        </Button>
+                    </a>
+                    <a
+                        href="/Hirusha suhan.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto"
+                    >
+                        <Button variant="secondary" size="lg" className="w-full">
+                            Download CV
                         </Button>
                     </a>
                     <a href="#contact">

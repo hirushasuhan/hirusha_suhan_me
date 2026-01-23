@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { SocialIcon } from "@/components/ui/social-icon";
 import { Github, Linkedin, Code2, Link as IconLink } from "lucide-react";
@@ -8,14 +8,18 @@ import { Github, Linkedin, Code2, Link as IconLink } from "lucide-react";
 import { MatrixRain } from "@/components/ui/matrix-rain";
 
 export function Hero() {
+    const { scrollY } = useScroll();
+    const y1 = useTransform(scrollY, [0, 500], [0, 200]);
+    const y2 = useTransform(scrollY, [0, 500], [0, -150]);
+
     return (
         <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center pt-32 sm:pt-40">
             {/* Matrix Rain Background */}
             <MatrixRain />
 
             {/* Background Gradient Blob */}
-            <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-cyan-500/20 blur-[100px]" />
-            <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-violet-500/10 blur-[100px]" />
+            <motion.div style={{ y: y1 }} className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-cyan-500/20 blur-[100px]" />
+            <motion.div style={{ y: y2 }} className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-violet-500/10 blur-[100px]" />
 
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -28,7 +32,7 @@ export function Hero() {
                     initial={{ scale: 0.5, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="relative mb-2"
+                    className="relative mb-6"
                 >
                     <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500 opacity-75 blur animate-spin-slow" />
                     <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-black/50 bg-black sm:h-48 sm:w-48">

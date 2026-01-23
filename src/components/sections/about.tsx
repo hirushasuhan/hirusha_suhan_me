@@ -7,7 +7,6 @@ import { Code, Palette, Search, GraduationCap } from "lucide-react";
 export function About() {
     const skills = [
         "React / Next.js",
-        "Tailwind CSS",
         "TypeScript",
         "Graphic Design",
         "Web Development",

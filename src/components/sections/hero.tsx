@@ -60,7 +60,7 @@ export function Hero() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="mx-auto max-w-2xl text-lg text-gray-300 sm:text-xl font-medium leading-relaxed"
+                    className="mx-auto max-w-2xl text-sm text-gray-300 sm:text-base font-medium leading-relaxed"
                 >
                     <span className="text-cyan-400">Frontend Developer</span>, <span className="text-purple-400">Designer</span> & <span className="text-green-400">Tech Researcher</span> crafting premium digital experiences with <span className="text-white">code</span> and <span className="text-white">creativity</span>.
                 </motion.p>

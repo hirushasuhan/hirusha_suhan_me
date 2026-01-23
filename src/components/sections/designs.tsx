@@ -31,6 +31,12 @@ const designs = [
         image: "/design 4.jpg",
         link: "#", // Replace with actual link
     },
+    {
+        id: 5,
+        title: "Design 5",
+        image: "/design 5.png",
+        link: "#", // Replace with actual link
+    },
 ];
 
 export function Designs() {
@@ -49,39 +55,47 @@ export function Designs() {
                     </p>
                 </motion.div>
 
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                    {designs.map((design, index) => (
-                        <motion.div
-                            key={design.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="group relative aspect-square overflow-hidden rounded-xl bg-white/5"
-                        >
-                            <a
-                                href={design.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block h-full w-full"
+                {/* Infinite Marquee Container */}
+                <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+                    <motion.div
+                        className="flex gap-6 w-max"
+                        animate={{ x: "-50%" }}
+                        transition={{
+                            duration: 30,
+                            ease: "linear",
+                            repeat: Infinity,
+                        }}
+                    >
+                        {/* Duplicate designs twice to ensure seamless loop on large screens */}
+                        {[...designs, ...designs].map((design, index) => (
+                            <div
+                                key={`${design.id}-${index}`}
+                                className="group relative flex-none w-[300px] aspect-square overflow-hidden rounded-xl bg-white/5"
                             >
-                                <Image
-                                    src={design.image}
-                                    alt={design.title}
-                                    fill
-                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                />
+                                <a
+                                    href={design.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block h-full w-full"
+                                >
+                                    <Image
+                                        src={design.image}
+                                        alt={design.title}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
 
-                                {/* Overlay */}
-                                <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                                    <div className="flex flex-col items-center gap-2 text-white">
-                                        <ExternalLink className="h-8 w-8 text-cyan-400" />
-                                        <span className="font-medium">View Project</span>
+                                    {/* Overlay */}
+                                    <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                        <div className="flex flex-col items-center gap-2 text-white">
+                                            <ExternalLink className="h-8 w-8 text-cyan-400" />
+                                            <span className="font-medium">View Project</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </motion.div>
-                    ))}
+                                </a>
+                            </div>
+                        ))}
+                    </motion.div>
                 </div>
             </div>
         </section>

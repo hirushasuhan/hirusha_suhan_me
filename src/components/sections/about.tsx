@@ -10,10 +10,11 @@ export function About() {
         "Tailwind CSS",
         "TypeScript",
         "Graphic Design",
-        "Java development",
+        "Web Development",
         "Tech Research",
-        "c++",
-        "python",
+        "C",
+        "Java",
+        "Python",
     ];
 
     const features = [
@@ -52,7 +53,7 @@ export function About() {
                         </p>
                         <p className="text-gray-400 leading-relaxed">
                             Dedicated Industrial Information Technology undergraduate with a passion for exploring the latest tech trends.
-                            Skilled in Python, C, JAVA, web development. Committed to applying theoretical knowledge to practical solutions
+                            Skilled in Python, C, JAVA, web development, graphic design and illustration. Committed to applying theoretical knowledge to practical solutions
                             and sharing insights through informative articles.
                         </p>
                     </div>

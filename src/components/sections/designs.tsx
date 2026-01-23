@@ -51,7 +51,7 @@ export function Designs() {
                 >
                     <h2 className="text-3xl font-bold text-white sm:text-4xl">Design Portfolio</h2>
                     <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-                        A curated collection of my UI/UX designs, illustrations, and graphic experiments.
+                        A curated collection of my designs, illustrations, flyers and graphic experiments.
                     </p>
                 </motion.div>
 

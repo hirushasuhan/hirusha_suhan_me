@@ -9,7 +9,7 @@ import { MatrixRain } from "@/components/ui/matrix-rain";
 
 export function Hero() {
     return (
-        <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center">
+        <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center pt-32 sm:pt-40">
             {/* Matrix Rain Background */}
             <MatrixRain />
 
@@ -21,8 +21,25 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="relative z-10 max-w-4xl space-y-8"
+                className="relative z-10 max-w-4xl space-y-4 flex flex-col items-center"
             >
+                {/* User Photo - Larger & Modern Gradient Border */}
+                <motion.div
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="relative mb-2"
+                >
+                    <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500 opacity-75 blur animate-spin-slow" />
+                    <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-black/50 bg-black sm:h-48 sm:w-48">
+                        <img
+                            src="/me.png"
+                            alt="Hirusha Suhan"
+                            className="h-full w-full object-cover"
+                        />
+                    </div>
+                </motion.div>
+
                 <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-cyan-400 backdrop-blur-md">
                     <span className="mr-2 flex h-2 w-2 relative">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
@@ -31,17 +48,22 @@ export function Hero() {
                     Available for Work
                 </div>
 
-                <h1 className="bg-gradient-to-br from-white via-white to-gray-400 bg-clip-text text-5xl font-bold tracking-tight text-transparent sm:text-7xl md:text-8xl">
-                    Hirusha Suhan
+                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+                    <span className="text-cyan-400">Hirusha</span> suhan
                 </h1>
 
-                <p className="mx-auto max-w-2xl text-lg text-gray-400 sm:text-xl">
-                    Frontend Developer, Designer & Tech Researcher crafting premium digital experiences with code and creativity.
-                </p>
+                <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="mx-auto max-w-2xl text-lg text-gray-300 sm:text-xl font-medium leading-relaxed"
+                >
+                    <span className="text-cyan-400">Frontend Developer</span>, <span className="text-purple-400">Designer</span> & <span className="text-green-400">Tech Researcher</span> crafting premium digital experiences with <span className="text-white">code</span> and <span className="text-white">creativity</span>.
+                </motion.p>
 
-                <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                    <a href="#projects">
-                        <Button size="lg" className="w-full sm:w-auto">
+                <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+                    <a href="#projects" className="w-full sm:w-auto">
+                        <Button size="lg" className="w-full">
                             View My Work
                         </Button>
                     </a>
@@ -55,14 +77,15 @@ export function Hero() {
                             Download CV
                         </Button>
                     </a>
-                    <a href="#contact">
-                        <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                    <a href="#contact" className="w-full sm:w-auto">
+                        <Button variant="outline" size="lg" className="w-full">
                             Contact Me
                         </Button>
                     </a>
                 </div>
 
-                <div className="mt-12 flex justify-center gap-6">
+                {/* Social Icons - Increased visibility */}
+                <div className="mt-4 flex justify-center gap-6 relative z-20">
                     <SocialIcon href="https://github.com/hirushasuhan" icon={Github} label="GitHub" />
                     <SocialIcon href="https://www.linkedin.com/in/hirusha-suhan/" icon={Linkedin} label="LinkedIn" />
                     <SocialIcon href="https://linktr.ee/hirusha.suhan" icon={IconLink} label="Linktree" />

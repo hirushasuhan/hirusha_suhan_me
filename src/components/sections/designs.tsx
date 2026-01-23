@@ -11,31 +11,31 @@ const designs = [
         id: 1,
         title: "Design 1",
         image: "/design 1.png",
-        link: "#", // Replace with actual link
+        link: "https://www.canva.com/design/DAGvArUJ0gE/UUNyLvYeeD-vGskwYklznw/view?utm_content=DAGvArUJ0gE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc8d0062db7", // Replace with actual link
     },
     {
         id: 2,
         title: "Design 2",
         image: "/design 2.png",
-        link: "#", // Replace with actual link
+        link: "https://www.canva.com/design/DAGqVsBi6lI/7lsizbk2NE4MdHQB_o4w6Q/edit?utm_content=DAGqVsBi6lI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", // Replace with actual link
     },
     {
         id: 3,
         title: "Design 3",
         image: "/design 3.png",
-        link: "#", // Replace with actual link
+        link: "https://www.canva.com/design/DAG5gpM9zPE/1dpqcPEml6qFlWLhETRRPw/view?utm_content=DAG5gpM9zPE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hcea41b8850", // Replace with actual link
     },
     {
         id: 4,
         title: "Design 4",
         image: "/design 4.jpg",
-        link: "#", // Replace with actual link
+        link: "https://www.facebook.com/share/p/1DpXEj9Mgd/", // Replace with actual link
     },
     {
         id: 5,
         title: "Design 5",
         image: "/design 5.png",
-        link: "#", // Replace with actual link
+        link: "https://www.canva.com/design/DAG6brk-O8c/DtwRFlTDRDLT5FVLqUB2Yw/edit?utm_content=DAG6brk-O8c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", // Replace with actual link
     },
 ];
 

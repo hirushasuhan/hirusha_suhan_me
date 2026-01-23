@@ -9,7 +9,7 @@ import Image from "next/image"; // Add import
 
 const projects = [
     {
-        title: "visa consultation company web project",
+        title: "Visa Consultation Company Web Project",
         description: "Created a visa consultation website using HTML, CSS, and JavaScript with features like appointment scheduling and visa eligibility checkers, improving client interaction and reducing response time by 40%..",
         tags: ["HTML", "CSS", "JavaScript"],
         links: {

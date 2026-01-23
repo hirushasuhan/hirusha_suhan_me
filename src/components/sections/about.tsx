@@ -9,9 +9,11 @@ export function About() {
         "React / Next.js",
         "Tailwind CSS",
         "TypeScript",
-        "UI/UX Design",
-        "Figma",
-        "Research",
+        "Graphic Design",
+        "Java development",
+        "Tech Research",
+        "c++",
+        "python",
     ];
 
     const features = [
@@ -22,8 +24,8 @@ export function About() {
         },
         {
             icon: Palette,
-            title: "UI/UX Design",
-            description: "Crafting intuitive and aesthetically pleasing user interfaces.",
+            title: "Graphic Design",
+            description: "Crafting intuitive and aesthetically pleasing designs.",
         },
         {
             icon: Search,
@@ -44,7 +46,16 @@ export function About() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl font-bold text-white sm:text-4xl">About Me</h2>
-                    <p className="mt-4 text-gray-400">My journey in the tech world.</p>
+                    <div className="mt-6 max-w-3xl mx-auto space-y-4">
+                        <p className="text-lg font-medium text-cyan-400">
+                            CS Undergraduate | Aspiring Tech Enthusiast | Web Developer | Python Dev
+                        </p>
+                        <p className="text-gray-400 leading-relaxed">
+                            Dedicated Industrial Information Technology undergraduate with a passion for exploring the latest tech trends.
+                            Skilled in Python, C, JAVA, web development. Committed to applying theoretical knowledge to practical solutions
+                            and sharing insights through informative articles.
+                        </p>
+                    </div>
                 </motion.div>
 
                 <div className="grid gap-8 md:grid-cols-3">

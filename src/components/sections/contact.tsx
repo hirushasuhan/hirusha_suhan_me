@@ -21,7 +21,7 @@ export function Contact() {
 
                     <div className="mt-8 flex justify-center gap-6">
                         <Button size="lg" className="rounded-full px-8 text-lg" asChild>
-                            <a href="mailto:your.email@example.com">
+                            <a href="mailto:hirushasuhan@outlook.com">
                                 <Mail className="mr-2 h-5 w-5" /> Say Hello
                             </a>
                         </Button>

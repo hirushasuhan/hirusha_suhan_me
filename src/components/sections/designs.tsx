@@ -1,28 +1,88 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { Link as LinkIcon, ExternalLink } from "lucide-react";
+
+// Initial designs configuration
+// Update 'link' with the actual URL you want to redirect to
+const designs = [
+    {
+        id: 1,
+        title: "Design 1",
+        image: "/design 1.png",
+        link: "#", // Replace with actual link
+    },
+    {
+        id: 2,
+        title: "Design 2",
+        image: "/design 2.png",
+        link: "#", // Replace with actual link
+    },
+    {
+        id: 3,
+        title: "Design 3",
+        image: "/design 3.png",
+        link: "#", // Replace with actual link
+    },
+    {
+        id: 4,
+        title: "Design 4",
+        image: "/design 4.jpg",
+        link: "#", // Replace with actual link
+    },
+];
 
 export function Designs() {
     return (
-        <section id="designs" className="py-20 px-4 bg-white/5 mx-4 md:mx-auto max-w-6xl rounded-3xl my-20">
-            <div className="container mx-auto text-center">
+        <section id="designs" className="py-20 px-4">
+            <div className="container mx-auto max-w-6xl">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
+                    className="mb-12 text-center"
                 >
                     <h2 className="text-3xl font-bold text-white sm:text-4xl">Design Portfolio</h2>
                     <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
                         A curated collection of my UI/UX designs, illustrations, and graphic experiments.
-                        (Coming into this space soon!)
                     </p>
-
-                    <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {[1, 2, 3, 4].map((i) => (
-                            <div key={i} className="aspect-square rounded-xl bg-white/5 border border-white/10 animate-pulse" />
-                        ))}
-                    </div>
                 </motion.div>
+
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    {designs.map((design, index) => (
+                        <motion.div
+                            key={design.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="group relative aspect-square overflow-hidden rounded-xl bg-white/5"
+                        >
+                            <a
+                                href={design.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block h-full w-full"
+                            >
+                                <Image
+                                    src={design.image}
+                                    alt={design.title}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                />
+
+                                {/* Overlay */}
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                    <div className="flex flex-col items-center gap-2 text-white">
+                                        <ExternalLink className="h-8 w-8 text-cyan-400" />
+                                        <span className="font-medium">View Project</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
         </section>
     )

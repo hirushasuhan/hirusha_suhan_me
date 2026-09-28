@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { SocialIcon } from "@/components/ui/social-icon";
-import { Github, Linkedin, Code2, Link as IconLink } from "lucide-react";
+import { Github, Linkedin, Link as IconLink } from "lucide-react";
 
 import { MatrixRain } from "@/components/ui/matrix-rain";
 
@@ -36,9 +37,12 @@ export function Hero() {
                 >
                     <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500 opacity-75 blur animate-spin-slow" />
                     <div className="relative h-36 w-36 overflow-hidden rounded-full border-4 border-black/50 bg-black sm:h-48 sm:w-48">
-                        <img
+                        <Image
                             src="/me.png"
                             alt="Hirusha Suhan"
+                            width={192}
+                            height={192}
+                            priority
                             className="h-full w-full object-cover"
                         />
                     </div>

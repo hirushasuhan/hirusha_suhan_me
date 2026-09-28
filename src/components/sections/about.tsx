@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Code, Palette, Search, GraduationCap } from "lucide-react";
+import { Code, Palette, Search } from "lucide-react";
 
 export function About() {
     const skills = [

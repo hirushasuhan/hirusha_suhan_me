@@ -9,6 +9,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hirushasuhan.github.io/hirusha_suhan_me"),
   title: "Hirusha Suhan | Frontend Developer & Designer",
   description: "Portfolio of Hirusha Suhan - Frontend Developer, Designer & Tech Researcher.",
   icons: {
@@ -19,10 +20,11 @@ export const metadata: Metadata = {
   keywords: [
     "Hirusha Suhan", "Frontend Developer", "Designer", "Tech Researcher", "Portfolio", "Web Developer", "React", "Next.js", "Graphic Design", "Sri Lanka", "Projects", "Contact", "UI/UX", "JavaScript", "TypeScript"
   ],
+  referrer: "strict-origin-when-cross-origin",
   openGraph: {
     title: "Hirusha Suhan | Frontend Developer & Designer",
     description: "Portfolio of Hirusha Suhan - Frontend Developer, Designer & Tech Researcher.",
-    url: "https://your-portfolio-url.com/",
+    url: "https://hirushasuhan.github.io/hirusha_suhan_me/",
     siteName: "Hirusha Suhan Portfolio",
     images: [
       {
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     images: ["/ICON.png"]
   },
   alternates: {
-    canonical: "https://your-portfolio-url.com/"
+    canonical: "https://hirushasuhan.github.io/hirusha_suhan_me/"
   },
   robots: {
     index: true,
@@ -55,12 +57,10 @@ export const metadata: Metadata = {
       "max-video-preview": -1
     }
   },
-  // GEO & AEO (example, adjust as needed)
+  // Region & Publisher metadata
   other: {
-    'geo.region': 'LK', // Sri Lanka
-    'geo.placename': 'Colombo',
-    'geo.position': '6.9271;79.8612',
-    'ICBM': '6.9271, 79.8612',
+    'geo.region': 'LK',
+    'geo.placename': 'Sri Lanka',
     'author': 'Hirusha Suhan',
     'publisher': 'Hirusha Suhan',
     'application-name': 'Hirusha Suhan Portfolio',
@@ -78,6 +78,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
+      <head>
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-black font-mono text-white antialiased selection:bg-cyan-500/30 selection:text-cyan-200",

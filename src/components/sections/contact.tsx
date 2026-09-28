@@ -14,7 +14,7 @@ export function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl font-bold text-white sm:text-4xl">Let's Connect</h2>
+                    <h2 className="text-3xl font-bold text-white sm:text-4xl">Let&apos;s Connect</h2>
                     <p className="mt-4 text-lg text-gray-400">
                         Interested in working together or just want to say hi?
                     </p>

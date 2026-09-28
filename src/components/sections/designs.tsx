@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Link as LinkIcon, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 // Initial designs configuration
 // Update 'link' with the actual URL you want to redirect to
@@ -17,7 +17,7 @@ const designs = [
         id: 2,
         title: "Design 2",
         image: "/design 2.png",
-        link: "https://www.canva.com/design/DAGqVsBi6lI/7lsizbk2NE4MdHQB_o4w6Q/edit?utm_content=DAGqVsBi6lI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", // Replace with actual link
+        link: "https://www.canva.com/design/DAGqVsBi6lI/7lsizbk2NE4MdHQB_o4w6Q/view?utm_content=DAGqVsBi6lI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", // Replace with actual link
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ const designs = [
         id: 5,
         title: "Design 5",
         image: "/design 5.png",
-        link: "https://www.canva.com/design/DAG6brk-O8c/DtwRFlTDRDLT5FVLqUB2Yw/edit?utm_content=DAG6brk-O8c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", // Replace with actual link
+        link: "https://www.canva.com/design/DAG6brk-O8c/DtwRFlTDRDLT5FVLqUB2Yw/view?utm_content=DAG6brk-O8c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", // Replace with actual link
     },
 ];
 

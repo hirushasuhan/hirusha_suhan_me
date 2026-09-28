@@ -37,15 +37,15 @@ export const FAQS: Faq[] = [
   },
   {
     q: "What does Hirusha Suhan build?",
-    a: "He builds full-stack web platforms and object-oriented software: Serandib Grand (a hotel reservation system in PHP and MySQL), UniAlloc (a university workload system in Next.js and TypeScript), a Visa Consultation Platform, a Java Bus Fleet Management System, a Java Financial Expense Tracker, a console banking system in C, and a bulk-mail and QR-ticket generator in JavaScript.",
+    a: "He engineers scalable full-stack web platforms, robust enterprise software, and high-performance digital solutions. His development capabilities span modern responsive web applications (Next.js, React, TypeScript), secure RESTful APIs and relational database architectures (SQL/MySQL), object-oriented desktop systems (Java), performant low-level systems (C/C++), interactive 3D WebGL experiences, and custom workflow automation tools.",
   },
   {
     q: "Which technologies does Hirusha Suhan use?",
-    a: "Next.js, React, TypeScript, JavaScript, Tailwind CSS, Java, Python, C, PHP, SQL and MySQL, plus Git, Docker and CI/CD. This portfolio itself uses Three.js and WebGL for its 3D particle hologram and Framer Motion for animation.",
+    a: "His core tech stack includes Next.js, React, TypeScript, and Tailwind CSS, alongside Three.js, WebGL, and Framer Motion for immersive 3D graphics and smooth animations. For backend and systems development, he works with Java, Python, C, PHP, and MySQL, supported by Git, Docker, and CI/CD pipelines.",
   },
   {
     q: "Does Hirusha Suhan do graphic design?",
-    a: "Yes. He designs event branding, posters and social media visuals, including work for IEEE SLSYWC'26, UvaXtreme v2 (IEEEXtreme 19.0) and university committees. See the Design Portfolio section of this site.",
+    a: "Yes. He designs event branding, posters and social media visuals, including work for IEEE SLSYWC'26, the IEEE Computer Society Uva Wellassa University Student Branch Chapter, and other university committees. See the Design Portfolio section of this site.",
   },
   {
     q: "What certifications does Hirusha Suhan hold?",

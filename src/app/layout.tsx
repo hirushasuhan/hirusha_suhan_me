@@ -2,27 +2,35 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { asset } from "@/lib/asset";
+import { Navbar } from "@/components/layout/navbar";
+import { SmoothScroll } from "@/components/providers/smooth-scroll";
+import { ScrollBridge } from "@/components/providers/scroll-bridge";
+import { StageLoader } from "@/components/three/stage-loader";
+import { IntroOverlay } from "@/components/motion/intro-overlay";
+import { ScrollProgress } from "@/components/motion/scroll-progress";
+import { MatrixRain } from "@/components/ui/matrix-rain";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-mono"
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hirushasuhan.github.io/hirusha_suhan_me"),
-  title: "Hirusha Suhan | Frontend Developer & Designer",
+  title: "Hirusha Suhan | Full-Stack Developer & Designer",
   description: "Portfolio of Hirusha Suhan - Computer Science & Informatics Undergraduate, Designer & Tech Enthusiast.",
   icons: {
-    icon: "/ICON.png",
-    shortcut: "/ICON.png",
-    apple: "/ICON.png",
+    icon: asset("/ICON.png"),
+    shortcut: asset("/ICON.png"),
+    apple: asset("/ICON.png"),
   },
   keywords: [
-    "Hirusha Suhan", "Frontend Developer", "Designer", "Tech Enthusiast", "Computer Science", "Informatics", "Industrial Information Technology", "Portfolio", "Web Developer", "React", "Next.js", "Graphic Design", "Sri Lanka", "Projects", "Contact", "UI/UX", "JavaScript", "TypeScript", "Java", "Python", "C", "Uva Wellassa University"
+    "Hirusha Suhan", "Full-Stack Developer", "Designer", "Tech Enthusiast", "Computer Science", "Informatics", "Industrial Information Technology", "Portfolio", "Web Developer", "React", "Next.js", "Graphic Design", "Sri Lanka", "Projects", "Contact", "UI/UX", "JavaScript", "TypeScript", "Java", "Python", "C", "Uva Wellassa University"
   ],
   referrer: "strict-origin-when-cross-origin",
   openGraph: {
-    title: "Hirusha Suhan | Frontend Developer & Designer",
+    title: "Hirusha Suhan | Full-Stack Developer & Designer",
     description: "Portfolio of Hirusha Suhan - Computer Science & Informatics Undergraduate, Designer & Tech Enthusiast.",
     url: "https://hirushasuhan.github.io/hirusha_suhan_me/",
     siteName: "Hirusha Suhan Portfolio",
@@ -39,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hirusha Suhan | Frontend Developer & Designer",
+    title: "Hirusha Suhan | Full-Stack Developer & Designer",
     description: "Portfolio of Hirusha Suhan - Computer Science & Informatics Undergraduate, Designer & Tech Enthusiast.",
     creator: "@hirusha_suhan",
     images: ["/ICON.png"]
@@ -58,7 +66,6 @@ export const metadata: Metadata = {
       "max-video-preview": -1
     }
   },
-  // Region & Publisher metadata
   other: {
     'geo.region': 'LK',
     'geo.placename': 'Sri Lanka',
@@ -70,17 +77,16 @@ export const metadata: Metadata = {
   }
 };
 
-import { Navbar } from "@/components/layout/navbar";
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark">
       <head>
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
       </head>
       <body
         className={cn(
@@ -88,8 +94,15 @@ export default function RootLayout({
           jetbrainsMono.variable
         )}
       >
-        <Navbar />
-        {children}
+        <SmoothScroll>
+          <ScrollBridge />
+          <StageLoader />
+          <MatrixRain />
+          <IntroOverlay />
+          <ScrollProgress />
+          <Navbar />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

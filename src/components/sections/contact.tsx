@@ -4,10 +4,11 @@ import { Button } from "@/components/ui/button";
 import { SocialIcon } from "@/components/ui/social-icon";
 import { Github, Linkedin, Mail, Link, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
+import { Magnetic } from "@/components/motion/magnetic";
 
 export function Contact() {
     return (
-        <footer id="contact" className="border-t border-white/10 bg-black py-20 px-4">
+        <footer id="contact" data-section="contact" className="border-t border-white/10 bg-black/60 backdrop-blur-sm py-20 px-4">
             <div className="container mx-auto max-w-4xl text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -20,29 +21,33 @@ export function Contact() {
                     </p>
 
                     <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                        <Button
-                            size="lg"
-                            className="group relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-8 text-lg text-cyan-400 backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/20 hover:scale-105 w-full sm:w-auto"
-                            asChild
-                        >
-                            <a href="mailto:hirushasuhan@outlook.com">
-                                <span className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
-                                <Mail className="mr-2 h-5 w-5 relative z-10" />
-                                <span className="relative z-10">Say Hello</span>
-                            </a>
-                        </Button>
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            className="group relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-8 text-lg text-cyan-400 backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/20 hover:scale-105 w-full sm:w-auto"
-                            asChild
-                        >
-                            <a href="https://linktr.ee/hirusha.suhan" target="_blank" rel="noopener noreferrer">
-                                <span className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
-                                <Link className="mr-2 h-5 w-5 relative z-10" />
-                                <span className="relative z-10">Linktree</span>
-                            </a>
-                        </Button>
+                        <Magnetic strength={0.3}>
+                            <Button
+                                size="lg"
+                                className="group relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-8 text-lg text-cyan-400 backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/20 hover:scale-105 w-full sm:w-auto"
+                                asChild
+                            >
+                                <a href="mailto:hirushasuhan@outlook.com">
+                                    <span className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
+                                    <Mail className="mr-2 h-5 w-5 relative z-10" />
+                                    <span className="relative z-10">Say Hello</span>
+                                </a>
+                            </Button>
+                        </Magnetic>
+                        <Magnetic strength={0.3}>
+                            <Button
+                                variant="outline"
+                                size="lg"
+                                className="group relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-8 text-lg text-cyan-400 backdrop-blur-md transition-all hover:bg-white/10 hover:border-white/20 hover:scale-105 w-full sm:w-auto"
+                                asChild
+                            >
+                                <a href="https://linktr.ee/hirusha.suhan" target="_blank" rel="noopener noreferrer">
+                                    <span className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
+                                    <Link className="mr-2 h-5 w-5 relative z-10" />
+                                    <span className="relative z-10">Linktree</span>
+                                </a>
+                            </Button>
+                        </Magnetic>
                     </div>
 
                     <div className="mt-16 flex flex-col items-center justify-between border-t border-white/10 pt-8 sm:flex-row">
@@ -50,9 +55,9 @@ export function Contact() {
                             © {new Date().getFullYear()} Hirusha Suhan. All rights reserved.
                         </p>
                         <div className="mt-4 flex gap-4 sm:mt-0">
-                            <SocialIcon href="https://github.com/hirushasuhan" icon={Github} label="Github" />
-                            <SocialIcon href="https://www.linkedin.com/in/hirusha-suhan/" icon={Linkedin} label="LinkedIn" />
-                            <SocialIcon href="https://x.com/hirusha_suhan" icon={Twitter} label="Twitter / X" />
+                            <Magnetic strength={0.25}><SocialIcon href="https://github.com/hirushasuhan" icon={Github} label="Github" /></Magnetic>
+                            <Magnetic strength={0.25}><SocialIcon href="https://www.linkedin.com/in/hirusha-suhan/" icon={Linkedin} label="LinkedIn" /></Magnetic>
+                            <Magnetic strength={0.25}><SocialIcon href="https://x.com/hirusha_suhan" icon={Twitter} label="Twitter / X" /></Magnetic>
                         </div>
                     </div>
                 </motion.div>

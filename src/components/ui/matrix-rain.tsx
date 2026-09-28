@@ -2,91 +2,76 @@
 
 import { useEffect, useRef } from "react";
 
-export function MatrixRain() {
-    const canvasRef = useRef<HTMLCanvasElement>(null);
+interface MatrixRainProps {
+  fps?: number;
+  fontSize?: number;
+}
 
-    useEffect(() => {
-        const canvas = canvasRef.current;
-        if (!canvas) return;
+export function MatrixRain({ fps = 12, fontSize = 16 }: MatrixRainProps) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-        const ctx = canvas.getContext("2d");
-        if (!ctx) return;
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx) return;
 
-        let animationFrameId: number;
+    let drops: number[] = [];
+    let raf = 0;
+    let last = 0;
 
-        const resizeCanvas = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        };
+    const resize = () => {
+      const dpr = Math.min(window.devicePixelRatio, 1.5);
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const columns = Math.ceil(window.innerWidth / fontSize);
+      // FIX: the old version never recomputed columns after a resize
+      drops = Array.from({ length: columns }, (_, i) => drops[i] ?? Math.random() * -40);
+    };
 
-        resizeCanvas();
-        window.addEventListener("resize", resizeCanvas);
+    const draw = () => {
+      // FIX: fade old glyphs to TRANSPARENT (was: paint black) so the 3D stage shows through
+      ctx.globalCompositeOperation = "destination-out";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+      ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+      ctx.globalCompositeOperation = "source-over";
 
-        // Configuration
-        const fontSize = 16;
-        const columns = Math.ceil(canvas.width / fontSize);
-        const drops: number[] = new Array(columns).fill(1); // Y position of drops
+      ctx.fillStyle = "#06b6d4";
+      ctx.font = `${fontSize}px monospace`;
+      for (let i = 0; i < drops.length; i++) {
+        ctx.fillText(Math.random() > 0.5 ? "1" : "0", i * fontSize, drops[i] * fontSize);
+        if (drops[i] * fontSize > window.innerHeight && Math.random() > 0.975) drops[i] = 0;
+        drops[i]++;
+      }
+    };
 
-        // Matrix characters - User specifically asked for "1 0 animation"
-        const chars = "10";
+    const loop = (t: number) => {
+      raf = requestAnimationFrame(loop); // rAF already pauses in background tabs
+      if (t - last < 1000 / fps) return;
+      last = t;
+      draw();
+    };
 
-        const draw = () => {
-            // Semi-transparent black to create trail effect
-            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+    resize();
+    window.addEventListener("resize", resize);
 
-            ctx.fillStyle = "#06b6d4"; // Cyan-500 to match theme
-            ctx.font = `${fontSize}px monospace`;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      for (let k = 0; k < 60; k++) draw(); // one still frame, no animation
+    } else {
+      raf = requestAnimationFrame(loop);
+    }
 
-            for (let i = 0; i < drops.length; i++) {
-                const text = chars.charAt(Math.floor(Math.random() * chars.length));
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", resize);
+    };
+  }, [fps, fontSize]);
 
-                // x = column index * font size
-                // y = drop value * font size
-                const x = i * fontSize;
-                const y = drops[i] * fontSize;
-
-                ctx.fillText(text, x, y);
-
-                // Reset drop to top randomly after it has crossed the screen
-                // Adding randomness to the reset to scatter drops
-                if (y > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-
-                // Increment y coordinate
-                drops[i]++;
-            }
-        };
-
-        let lastDrawTime = 0;
-        const fps = 10; // Set to 10 for a very slow, readable speed (0 breaks division)
-        const frameInterval = 1000 / fps;
-
-        const animate = (timestamp: number) => {
-            animationFrameId = requestAnimationFrame(animate);
-
-            const elapsed = timestamp - lastDrawTime;
-
-            if (elapsed > frameInterval) {
-                lastDrawTime = timestamp - (elapsed % frameInterval);
-                draw();
-            }
-        };
-
-        // Start animation
-        animate(0);
-
-        return () => {
-            window.removeEventListener("resize", resizeCanvas);
-            cancelAnimationFrame(animationFrameId);
-        };
-    }, []);
-
-    return (
-        <canvas
-            ref={canvasRef}
-            className="fixed inset-0 pointer-events-none z-0 opacity-20"
-        />
-    );
+  return (
+    <canvas
+      ref={canvasRef}
+      aria-hidden="true"
+      className="pointer-events-none fixed inset-0 z-[1] h-full w-full opacity-20"
+    />
+  );
 }

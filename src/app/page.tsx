@@ -6,7 +6,7 @@ import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col overflow-hidden bg-black">
+    <main className="relative z-10 flex min-h-screen flex-col overflow-x-clip">
       <Hero />
       <About />
       <Projects />

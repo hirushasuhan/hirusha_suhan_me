@@ -96,7 +96,7 @@ export function About() {
                         </p>
                         <p className="text-gray-400 leading-relaxed">
                             Undergraduate at <span className="text-white font-medium">Uva Wellassa University of Sri Lanka</span> in the Department of Computer Science and Informatics (CSI), specializing in Industrial Information Technology (IIT). 
-                            Passionate about combining software engineering, object-oriented design, and modern technologies to build practical solutions. 
+                            Passionate about combining software engineering, different type of development architectures, and modern technologies to build high-performance digital solutions. 
                             Alongside development, I actively explore networking, cybersecurity, DevOps, web3 systems, cryptography, and game development.
                         </p>
                     </div>

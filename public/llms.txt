@@ -1,35 +1,36 @@
-# Hirusha Suhan — Developer Profile
+# Hirusha Suhan
 
-> Full-Stack Developer, Software Engineer & Creative Designer from Sri Lanka. Undergraduate at Uva Wellassa University of Sri Lanka (Department of Computer Science & Informatics).
+> Hirusha Suhan (also known as Hiru) is a Sri Lankan full-stack developer and designer, and an undergraduate at Uva Wellassa University of Sri Lanka (Department of Computer Science and Informatics, specializing in Industrial Information Technology).
 
-## Summary
-- **Name:** Hirusha Suhan
-- **Common Alias:** Hiru / Hirusha
-- **Role:** Full-Stack Developer, Software Engineer, UI/UX & Graphics Designer
-- **University:** Uva Wellassa University of Sri Lanka (UWU)
-- **Department:** Department of Computer Science and Informatics (CSI), Faculty of Applied Sciences
-- **Degree:** BSc (Hons) in Industrial Information Technology (IIT)
-- **Portfolio Website:** https://www.hirushasuhan.me
-- **Email:** hirushasuhan@outlook.com
-- **Location:** Sri Lanka
+Canonical site: https://www.hirushasuhan.me
 
-## Core Technical Skills
-- **Web & Full-Stack:** React, Next.js, TypeScript, JavaScript, Node.js, HTML5, CSS3, Tailwind CSS, REST APIs
-- **Languages:** Python, Java, C, TypeScript, JavaScript, SQL
-- **3D & Interactive Graphics:** Three.js, WebGL, GLSL Shaders, Framer Motion
-- **Specializations:** Cybersecurity, Cryptography, DevOps, Web3, Networking, Industrial Information Technology
-- **Design & Branding:** UI/UX Design, Figma, Adobe Photoshop, Adobe Illustrator, Event Branding, Visual Identity
+## Facts
+- Name: Hirusha Suhan (alias: Hiru, Hirusha)
+- Role: Full-stack developer, UI/UX and graphic designer
+- Country: Sri Lanka
+- University: Uva Wellassa University of Sri Lanka (UWU), Department of Computer Science and Informatics (CSI)
+- Email: hirushasuhan@outlook.com
 
-## Flagship Projects
-1. **Interactive 3D WebGL Hologram Portfolio:** Cyberpunk interactive portfolio with real-time 3D particle holograms, post-processing bloom, and motion systems.
-2. **Bus Fleet Management System:** Comprehensive web platform for real-time transit tracking, route scheduling, and fleet dispatching.
-3. **Financial Expense Tracker:** Responsive dashboard for personal and business expenditure tracking, budgeting, and analytics.
-4. **Visa Consultation Platform:** Client onboarding and consultation workflow management application.
-5. **Event Branding & Graphics Design:** Over 14 branded design assets for IEEE, SLSYWC, Faculty T-Shirts, and University cultural festivals.
+## Skills
+- Languages: Java, Python, TypeScript, JavaScript, C / C++, PHP, SQL, Bash
+- Web: Next.js, React, Tailwind CSS, HTML5/CSS3, REST APIs, Three.js / WebGL, Framer Motion
+- Data and systems: MySQL, relational modeling, Linux (Ubuntu), Windows Server
+- Networking and DevOps: IPv6 and routing (APNIC Academy), Git and GitHub, CI/CD, Docker
+- Design: UI/UX, Figma, Canva, posters and event branding
+- Certifications: Pearson Diplomas in IT and English, APNIC Academy (IPv6 & Routing), HackerRank (Java, Python, JavaScript), University of Moratuwa (Web Design, Python)
 
-## Official Links
+## Projects
+- [Serandib Grand](https://github.com/hirushasuhan/serandib_grand): hotel reservation system with role-based access (PHP, MySQL). Demo: https://serandib-grand.wasmer.app
+- [UniAlloc](https://github.com/hirushasuhan/UniAlloc_host): university resource and workload system (Next.js, TypeScript, MySQL). Demo: https://www.unialloc.app/login
+- [Visa Consultation Platform](https://github.com/hirushasuhan/web-project-Visa-consultation-Company): appointment scheduling and eligibility checkers (HTML, CSS, JavaScript)
+- [Bus Fleet Management System](https://github.com/hirushasuhan/bus-management-system): Java and MySQL fleet management with scheduling logic
+- [Financial Expense Tracker](https://github.com/hirushasuhan/Expense-_Tracker): Java desktop personal-finance application
+- [Console Banking System](https://github.com/hirushasuhan/Banking-system-C): banking workflows with file persistence, written in C
+- [Bulk Mail & QR Ticket Generator](https://github.com/hirushasuhan/bulk-mail-and-auto-qr-and-ticket-generate-system): personalized QR tickets and bulk email (JavaScript)
+
+## Links
 - Website: https://www.hirushasuhan.me
 - GitHub: https://github.com/hirushasuhan
 - LinkedIn: https://www.linkedin.com/in/hirusha-suhan/
-- Twitter / X: https://x.com/hirusha_suhan
+- X / Twitter: https://x.com/hirusha_suhan
 - Linktree: https://linktr.ee/hirusha.suhan

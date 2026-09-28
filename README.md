@@ -11,8 +11,9 @@ A cyber-themed, modern developer portfolio built for **Hirusha Suhan** — Front
 ---
 
 ## 🌐 Live Preview & Deployment
-- **Live Site**: [https://hirushasuhan.github.io/hirusha_suhan_me/](https://hirushasuhan.github.io/hirusha_suhan_me/)
-- **Deployment**: Automated via GitHub Pages with GitHub Actions CI/CD (`.github/workflows/deploy.yml`) on `main` and `master` branch pushes.
+- **Live Site**: [https://www.hirushasuhan.me](https://www.hirushasuhan.me)
+- **Deployment**: [Vercel](https://vercel.com) auto-deploys every push (static export, no base path). `.github/workflows/deploy.yml` is a manual-only GitHub Pages mirror.
+- **SEO / AEO / GEO**: see **[SEO_GUIDE.md](./SEO_GUIDE.md)** (structured data, FAQ, `llms.txt`, favicon, Search Console checklist).
 
 ---
 
@@ -95,7 +96,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the live site in you
 ```bash
 npm run build
 ```
-Generates a static export in the `./out` directory ready for deployment to GitHub Pages or any static host.
+Generates a static export in the `./out` directory ready for Vercel or any static host.
 
 ### 5. Run Lint Check
 ```bash

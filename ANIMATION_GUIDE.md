@@ -235,6 +235,8 @@ src/app/layout.tsx, page.tsx, globals.css, sections/*  (edit)
 
 ### 6.1 Own the `basePath` (fixes audit #1)
 
+> **You deploy on Vercel at `www.hirushasuhan.me`, so `basePath` stays empty in production.** This section only matters if you also publish to `github.io/hirusha_suhan_me`. `asset()` is harmless either way.
+
 `next.config.ts`:
 ```ts
 import type { NextConfig } from "next";

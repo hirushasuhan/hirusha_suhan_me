@@ -1,8 +1,8 @@
 name: Deploy to GitHub Pages
 
+# Production (www.hirushasuhan.me) is deployed by Vercel on every push.
+# This GitHub Pages workflow is kept as a manual-only mirror (Actions tab -> Run workflow).
 on:
-  push:
-    branches: ["main", "master"]
   workflow_dispatch:
 
 permissions:
@@ -60,7 +60,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path || '/hirusha_suhan_me' }}
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

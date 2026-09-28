@@ -1,0 +1,35 @@
+# Hirusha Suhan (Hiru) — Developer Profile
+
+> Full-Stack Developer, Software Engineer & Creative Designer from Sri Lanka. Undergraduate at Uva Wellassa University of Sri Lanka (Department of Computer Science & Informatics).
+
+## Summary
+- **Name:** Hirusha Suhan
+- **Common Alias:** Hiru / Hirusha
+- **Role:** Full-Stack Developer, Software Engineer, UI/UX & Graphics Designer
+- **University:** Uva Wellassa University of Sri Lanka (UWU)
+- **Department:** Department of Computer Science and Informatics (CSI), Faculty of Applied Sciences
+- **Degree:** BSc (Hons) in Industrial Information Technology (IIT)
+- **Portfolio Website:** https://www.hirushasuhan.me
+- **Email:** hirushasuhan@outlook.com
+- **Location:** Sri Lanka
+
+## Core Technical Skills
+- **Web & Full-Stack:** React, Next.js, TypeScript, JavaScript, Node.js, HTML5, CSS3, Tailwind CSS, REST APIs
+- **Languages:** Python, Java, C, TypeScript, JavaScript, SQL
+- **3D & Interactive Graphics:** Three.js, WebGL, GLSL Shaders, Framer Motion
+- **Specializations:** Cybersecurity, Cryptography, DevOps, Web3, Networking, Industrial Information Technology
+- **Design & Branding:** UI/UX Design, Figma, Adobe Photoshop, Adobe Illustrator, Event Branding, Visual Identity
+
+## Flagship Projects
+1. **Interactive 3D WebGL Hologram Portfolio:** Cyberpunk interactive portfolio with real-time 3D particle holograms, post-processing bloom, and motion systems.
+2. **Bus Fleet Management System:** Comprehensive web platform for real-time transit tracking, route scheduling, and fleet dispatching.
+3. **Financial Expense Tracker:** Responsive dashboard for personal and business expenditure tracking, budgeting, and analytics.
+4. **Visa Consultation Platform:** Client onboarding and consultation workflow management application.
+5. **Event Branding & Graphics Design:** Over 14 branded design assets for IEEE, SLSYWC, Faculty T-Shirts, and University cultural festivals.
+
+## Official Links
+- Website: https://www.hirushasuhan.me
+- GitHub: https://github.com/hirushasuhan
+- LinkedIn: https://www.linkedin.com/in/hirusha-suhan/
+- Twitter / X: https://x.com/hirusha_suhan
+- Linktree: https://linktr.ee/hirusha.suhan

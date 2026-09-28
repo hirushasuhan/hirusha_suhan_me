@@ -95,8 +95,8 @@ export function About() {
                             Computer Science &amp; Informatics Undergraduate | Full-Stack Developer | Designer | Tech Enthusiast
                         </p>
                         <p className="text-gray-400 leading-relaxed">
-                            Undergraduate at <span className="text-white font-medium">Uva Wellassa University of Sri Lanka</span> in the Department of Computer Science and Informatics (CSI), specializing in Industrial Information Technology (IIT). 
-                            Passionate about combining software engineering, object-oriented design, and modern technologies to build practical solutions. 
+                            I am <span className="text-white font-semibold">Hirusha Suhan</span> (widely known in tech circles as <span className="text-cyan-400 font-semibold">Hiru</span>), an Undergraduate at <span className="text-white font-medium">Uva Wellassa University of Sri Lanka</span> in the Department of Computer Science and Informatics (CSI), specializing in Industrial Information Technology (IIT). 
+                            Passionate about combining full-stack software engineering, object-oriented architecture, and modern technologies to build high-performance digital solutions. 
                             Alongside development, I actively explore networking, cybersecurity, DevOps, web3 systems, cryptography, and game development.
                         </p>
                     </div>

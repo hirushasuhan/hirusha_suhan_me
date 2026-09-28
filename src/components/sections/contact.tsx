@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { SocialIcon } from "@/components/ui/social-icon";
-import { Github, Linkedin, Mail, Link } from "lucide-react";
+import { Github, Linkedin, Mail, Link, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Contact() {
@@ -52,6 +52,7 @@ export function Contact() {
                         <div className="mt-4 flex gap-4 sm:mt-0">
                             <SocialIcon href="https://github.com/hirushasuhan" icon={Github} label="Github" />
                             <SocialIcon href="https://www.linkedin.com/in/hirusha-suhan/" icon={Linkedin} label="LinkedIn" />
+                            <SocialIcon href="https://x.com/hirusha_suhan" icon={Twitter} label="Twitter / X" />
                         </div>
                     </div>
                 </motion.div>

@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { SocialIcon } from "@/components/ui/social-icon";
-import { Github, Linkedin, Link as IconLink } from "lucide-react";
+import { Github, Linkedin, Link as IconLink, Twitter } from "lucide-react";
 
 import { MatrixRain } from "@/components/ui/matrix-rain";
 
@@ -66,7 +66,7 @@ export function Hero() {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="mx-auto max-w-2xl text-sm text-gray-300 sm:text-base font-medium leading-relaxed"
                 >
-                    <span className="text-cyan-400">Frontend Developer</span>, <span className="text-purple-400">Designer</span> & <span className="text-green-400">Tech Researcher</span> crafting premium digital experiences with <span className="text-white">code</span> and <span className="text-white">creativity</span>.
+                    <span className="text-cyan-400">Frontend Developer</span>, <span className="text-purple-400">Designer</span> & <span className="text-green-400">Tech Enthusiast</span> crafting premium digital experiences with <span className="text-white">code</span> and <span className="text-white">creativity</span>.
                 </motion.p>
 
                 <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
@@ -96,6 +96,7 @@ export function Hero() {
                 <div className="mt-4 flex justify-center gap-6 relative z-20">
                     <SocialIcon href="https://github.com/hirushasuhan" icon={Github} label="GitHub" />
                     <SocialIcon href="https://www.linkedin.com/in/hirusha-suhan/" icon={Linkedin} label="LinkedIn" />
+                    <SocialIcon href="https://x.com/hirusha_suhan" icon={Twitter} label="Twitter / X" />
                     <SocialIcon href="https://linktr.ee/hirusha.suhan" icon={IconLink} label="Linktree" />
                 </div>
             </motion.div>

@@ -11,19 +11,19 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://hirushasuhan.github.io/hirusha_suhan_me"),
   title: "Hirusha Suhan | Frontend Developer & Designer",
-  description: "Portfolio of Hirusha Suhan - Frontend Developer, Designer & Tech Researcher.",
+  description: "Portfolio of Hirusha Suhan - Computer Science & Informatics Undergraduate, Designer & Tech Enthusiast.",
   icons: {
     icon: "/ICON.png",
     shortcut: "/ICON.png",
     apple: "/ICON.png",
   },
   keywords: [
-    "Hirusha Suhan", "Frontend Developer", "Designer", "Tech Researcher", "Portfolio", "Web Developer", "React", "Next.js", "Graphic Design", "Sri Lanka", "Projects", "Contact", "UI/UX", "JavaScript", "TypeScript"
+    "Hirusha Suhan", "Frontend Developer", "Designer", "Tech Enthusiast", "Computer Science", "Informatics", "Industrial Information Technology", "Portfolio", "Web Developer", "React", "Next.js", "Graphic Design", "Sri Lanka", "Projects", "Contact", "UI/UX", "JavaScript", "TypeScript", "Java", "Python", "C", "Uva Wellassa University"
   ],
   referrer: "strict-origin-when-cross-origin",
   openGraph: {
     title: "Hirusha Suhan | Frontend Developer & Designer",
-    description: "Portfolio of Hirusha Suhan - Frontend Developer, Designer & Tech Researcher.",
+    description: "Portfolio of Hirusha Suhan - Computer Science & Informatics Undergraduate, Designer & Tech Enthusiast.",
     url: "https://hirushasuhan.github.io/hirusha_suhan_me/",
     siteName: "Hirusha Suhan Portfolio",
     images: [
@@ -40,7 +40,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hirusha Suhan | Frontend Developer & Designer",
-    description: "Portfolio of Hirusha Suhan - Frontend Developer, Designer & Tech Researcher.",
+    description: "Portfolio of Hirusha Suhan - Computer Science & Informatics Undergraduate, Designer & Tech Enthusiast.",
+    creator: "@hirusha_suhan",
     images: ["/ICON.png"]
   },
   alternates: {

@@ -2,35 +2,78 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Code, Palette, Search } from "lucide-react";
+import {
+    Code,
+    Palette,
+    Search,
+    Terminal,
+    Globe,
+    Database,
+    Network,
+    Award
+} from "lucide-react";
 
 export function About() {
-    const skills = [
-        "React / Next.js",
-        "TypeScript",
-        "Graphic Design",
-        "Web Development",
-        "Tech Research",
-        "C",
-        "Java",
-        "Python",
-    ];
-
     const features = [
         {
             icon: Code,
-            title: "Frontend Development",
-            description: "Building responsive, accessible, and performant web applications.",
+            title: "Frontend & Software Engineering",
+            description: "Building responsive web platforms and object-oriented systems with Next.js, React, Java, and TypeScript.",
         },
         {
             icon: Palette,
-            title: "Graphic Design",
-            description: "Crafting intuitive and aesthetically pleasing designs.",
+            title: "UI/UX & Graphic Design",
+            description: "Crafting intuitive digital experiences, branding assets, event visuals, and publication designs.",
         },
         {
             icon: Search,
-            title: "Tech Research",
-            description: "Explaining and exploring the latest technologies and trends.",
+            title: "Tech Research & Networking",
+            description: "APNIC certified in IPv6 & routing, analyzing infrastructure automation, cloud systems, and technical writing.",
+        },
+    ];
+
+    const skillCategories = [
+        {
+            category: "Languages",
+            icon: Terminal,
+            color: "text-amber-400 bg-amber-500/10 border-amber-500/20",
+            skills: ["Java (OOP)", "Python", "TypeScript", "JavaScript (ES6+)", "C", "PHP 8", "SQL"],
+        },
+        {
+            category: "Frontend & Web",
+            icon: Globe,
+            color: "text-cyan-400 bg-cyan-500/10 border-cyan-500/20",
+            skills: ["Next.js (App Router)", "React", "Tailwind CSS", "HTML5 / CSS3", "Wasmer Edge (WCGI)"],
+        },
+        {
+            category: "Databases & Systems",
+            icon: Database,
+            color: "text-purple-400 bg-purple-500/10 border-purple-500/20",
+            skills: ["MySQL", "Relational Modeling", "ER Diagrams", "Linux (Ubuntu)", "Windows Server"],
+        },
+        {
+            category: "Networking & DevOps",
+            icon: Network,
+            color: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
+            skills: ["IPv6 & Routing (APNIC)", "Git & GitHub", "CI/CD Concepts", "Infrastructure Automation"],
+        },
+        {
+            category: "Design & Research",
+            icon: Palette,
+            color: "text-pink-400 bg-pink-500/10 border-pink-500/20",
+            skills: ["UI/UX Design", "Graphic Design & Posters", "Brand Identity", "Tech Article Writing (The Evaluation)"],
+        },
+        {
+            category: "Certifications & Diplomas",
+            icon: Award,
+            color: "text-blue-400 bg-blue-500/10 border-blue-500/20",
+            skills: [
+                "Pearson Certified Diploma in IT",
+                "Pearson Certified Diploma in English",
+                "HackerRank (Java, Python, JS)",
+                "APNIC Academy (IPv6 & Routing)",
+                "UoM (Web Design & Python)",
+            ],
         },
     ];
 
@@ -48,12 +91,11 @@ export function About() {
                     <h2 className="text-3xl font-bold text-white sm:text-4xl">About Me</h2>
                     <div className="mt-6 max-w-3xl mx-auto space-y-4">
                         <p className="text-lg font-medium text-cyan-400">
-                            CS Undergraduate | Aspiring Tech Enthusiast | Web Developer | Python Dev
+                            Computer Science &amp; Informatics Undergraduate | Web Developer | Designer | Tech Enthusiast
                         </p>
                         <p className="text-gray-400 leading-relaxed">
-                            Dedicated Industrial Information Technology undergraduate with a passion for exploring the latest tech trends.
-                            Skilled in Python, C, JAVA, web development, graphic design and illustration. Committed to applying theoretical knowledge to practical solutions
-                            and sharing insights through informative articles.
+                            Undergraduate at <span className="text-white font-medium">Uva Wellassa University of Sri Lanka</span> specializing in Industrial Information Technology (IIT). 
+                            Passionate about combining software development, object-oriented principles, and modern technologies to solve practical, real-world problems.
                         </p>
                     </div>
                 </motion.div>
@@ -79,17 +121,46 @@ export function About() {
                 </div>
 
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-16 text-center"
+                    className="mt-20"
                 >
-                    <h3 className="text-xl font-semibold text-white mb-6">Tech Stack</h3>
-                    <div className="flex flex-wrap justify-center gap-3">
-                        {skills.map((skill) => (
-                            <span key={skill} className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300 transition-colors hover:border-cyan-500/50 hover:text-white cursor-default">
-                                {skill}
-                            </span>
+                    <div className="text-center mb-10">
+                        <h3 className="text-2xl font-bold text-white sm:text-3xl">Tech Stack & Skills</h3>
+                        <p className="mt-2 text-sm text-gray-400">
+                            Verified technical competencies, engineering stacks, and professional accreditations.
+                        </p>
+                    </div>
+
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {skillCategories.map((group, idx) => (
+                            <motion.div
+                                key={group.category}
+                                initial={{ opacity: 0, y: 15 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.08 }}
+                            >
+                                <Card className="h-full border-white/10 bg-white/5 p-6 hover:border-cyan-500/40 transition-all hover:bg-white/[0.08] flex flex-col">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className={`p-2 rounded-lg border ${group.color}`}>
+                                            <group.icon className="h-5 w-5" />
+                                        </div>
+                                        <h4 className="font-semibold text-white text-base">{group.category}</h4>
+                                    </div>
+                                    <div className="flex flex-wrap gap-2 mt-auto">
+                                        {group.skills.map((skill) => (
+                                            <span
+                                                key={skill}
+                                                className="rounded-md border border-white/10 bg-black/40 px-3 py-1.5 text-xs font-medium text-gray-300 transition-colors hover:border-cyan-500/50 hover:text-white cursor-default"
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </Card>
+                            </motion.div>
                         ))}
                     </div>
                 </motion.div>

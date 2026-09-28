@@ -21,11 +21,11 @@ const SITE_URL = "https://www.hirushasuhan.me";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Hirusha Suhan (Hiru) | Full-Stack Developer & Designer",
-    template: "%s | Hirusha Suhan (Hiru)",
+    default: "Hirusha Suhan | Full-Stack Developer & Designer",
+    template: "%s | Hirusha Suhan",
   },
   description:
-    "Official portfolio of Hirusha Suhan (Hiru) - Full-Stack Developer, UI/UX Designer & Computer Science & Informatics Undergraduate at Uva Wellassa University of Sri Lanka (CSI). Specializing in Next.js, React, Python, Three.js 3D WebGL, DevOps, Web3, and Event Branding.",
+    "Official portfolio of Hirusha Suhan - Full-Stack Developer, UI/UX Designer & Computer Science & Informatics Undergraduate at Uva Wellassa University of Sri Lanka (CSI). Specializing in Next.js, React, Python, Three.js 3D WebGL, DevOps, Web3, and Event Branding.",
   applicationName: "Hirusha Suhan Portfolio",
   authors: [{ name: "Hirusha Suhan", url: SITE_URL }],
   creator: "Hirusha Suhan",
@@ -83,17 +83,17 @@ export const metadata: Metadata = {
     lastName: "Suhan",
     username: "hirushasuhan",
     gender: "male",
-    title: "Hirusha Suhan (Hiru) | Full-Stack Developer & Designer",
+    title: "Hirusha Suhan | Full-Stack Developer & Designer",
     description:
-      "Official portfolio of Hirusha Suhan (Hiru) - Full-Stack Developer, UI/UX Designer & Computer Science & Informatics Undergraduate at Uva Wellassa University of Sri Lanka (CSI).",
+      "Official portfolio of Hirusha Suhan - Full-Stack Developer, UI/UX Designer & Computer Science & Informatics Undergraduate at Uva Wellassa University of Sri Lanka (CSI).",
     url: `${SITE_URL}/`,
-    siteName: "Hirusha Suhan (Hiru) Portfolio",
+    siteName: "Hirusha Suhan Portfolio",
     images: [
       {
         url: `${SITE_URL}/my%20photo/Man_in_dark_studio_portrait_2K_20260928210937.jpg`,
         width: 1200,
         height: 630,
-        alt: "Hirusha Suhan (Hiru) - Full-Stack Developer Portrait",
+        alt: "Hirusha Suhan - Full-Stack Developer Portrait",
       },
       {
         url: `${SITE_URL}/ICON.png`,
@@ -106,9 +106,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hirusha Suhan (Hiru) | Full-Stack Developer & Designer",
+    title: "Hirusha Suhan | Full-Stack Developer & Designer",
     description:
-      "Official portfolio of Hirusha Suhan (Hiru) - Full-Stack Developer, Designer & Computer Science Undergraduate at Uva Wellassa University of Sri Lanka.",
+      "Official portfolio of Hirusha Suhan - Full-Stack Developer, Designer & Computer Science Undergraduate at Uva Wellassa University of Sri Lanka.",
     creator: "@hirusha_suhan",
     site: "@hirusha_suhan",
     images: [`${SITE_URL}/my%20photo/Man_in_dark_studio_portrait_2K_20260928210937.jpg`],

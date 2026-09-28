@@ -67,7 +67,6 @@ export function Hero() {
                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
                     <TextScramble text="Hirusha" play={introDone} className="text-cyan-400" />{" "}
                     <TextScramble text="Suhan" play={introDone} speed={45} />
-                    <span className="sr-only"> (Hiru) - Full-Stack Developer &amp; Software Engineer</span>
                 </h1>
 
                 <p className="max-w-2xl text-sm text-gray-300 sm:text-base font-medium leading-relaxed">

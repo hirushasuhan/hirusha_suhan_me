@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     "Hiru developer",
     "Hirusha Suhan developer",
     "Full-Stack Developer Sri Lanka",
+    "Software Engineer Sri Lanka",
     "Web Developer Sri Lanka",
     "Next.js Developer",
     "React Developer",
@@ -102,7 +103,7 @@ export const metadata: Metadata = {
   // (only the token string, not the whole tag). Omitted from the HTML when unset.
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
-    other: process.env.BING_SITE_VERIFICATION ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION } : undefined,
+    other: { "msvalidate.01": process.env.BING_SITE_VERIFICATION || "BC62B9DB55CF01F2AC402703F2035573" },
   },
   other: { "geo.region": "LK", "geo.placename": "Sri Lanka" },
 };

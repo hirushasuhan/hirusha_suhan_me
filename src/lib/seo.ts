@@ -67,18 +67,53 @@ const person = {
   url: `${SITE_URL}/`,
   image: PROFILE_IMAGE,
   email: `mailto:${EMAIL}`,
-  jobTitle: "Full-Stack Developer & Designer",
+  jobTitle: "Full-Stack Software Engineer & Designer",
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "Full-Stack Software Engineer & UI/UX Designer",
+    skills: "Next.js, React, TypeScript, Three.js, WebGL, Java, Python, C, MySQL, Relational Database Modeling, UI/UX Design",
+  },
   description:
     "Hirusha Suhan (Hiru) is a Sri Lankan full-stack developer and designer, and a Computer Science & Informatics undergraduate at Uva Wellassa University of Sri Lanka.",
   address: { "@type": "PostalAddress", addressCountry: "LK" },
+  knowsLanguage: ["en", "si"],
   alumniOf: {
     "@type": "CollegeOrUniversity",
     name: "Uva Wellassa University of Sri Lanka",
     alternateName: "UWU",
     url: "https://www.uwu.ac.lk/",
   },
+  memberOf: [
+    {
+      "@type": "Organization",
+      name: "IEEE Computer Society Uva Wellassa University Student Branch Chapter",
+      url: "https://www.uwu.ac.lk/",
+    },
+    {
+      "@type": "Organization",
+      name: "IEEE Student Branch Uva Wellassa University",
+    },
+  ],
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "APNIC Academy Certification in IPv6 & Routing",
+      credentialCategory: "certification",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "Pearson BTEC Diplomas in Information Technology and English",
+      credentialCategory: "diploma",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "HackerRank Skill Certifications in Java, Python, and JavaScript",
+      credentialCategory: "certification",
+    },
+  ],
   knowsAbout: [
     "Full-stack web development",
+    "Software Engineering",
     "Next.js",
     "React",
     "TypeScript",

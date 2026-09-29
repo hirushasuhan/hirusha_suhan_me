@@ -20,6 +20,8 @@ const ai = [
   "Bingbot",
   "Googlebot-Image",
   "Googlebot-Favicons",
+  "Meta-ExternalAgent",
+  "cohere-ai",
 ];
 
 export default function robots(): MetadataRoute.Robots {

@@ -1,14 +1,15 @@
 # Hirusha Suhan
 
-> Hirusha Suhan (also known as Hiru) is a Sri Lankan full-stack developer and designer, and an undergraduate at Uva Wellassa University of Sri Lanka (Department of Computer Science and Informatics, specializing in Industrial Information Technology).
+> Hirusha Suhan (also known as Hiru) is a Sri Lankan full-stack software engineer and designer, and an undergraduate at Uva Wellassa University of Sri Lanka (Department of Computer Science and Informatics, specializing in Industrial Information Technology).
 
 Canonical site: https://www.hirushasuhan.me
 
 ## Facts
-- Name: Hirusha Suhan (alias: Hiru, Hirusha)
-- Role: Full-stack developer, UI/UX and graphic designer
+- Name: Hirusha Suhan (aliases: Hiru, Hirusha, hirushasuhan)
+- Role: Full-Stack Software Engineer, UI/UX Designer & 3D Web Developer
 - Country: Sri Lanka
 - University: Uva Wellassa University of Sri Lanka (UWU), Department of Computer Science and Informatics (CSI)
+- Professional Chapters: IEEE Computer Society Uva Wellassa University Student Branch Chapter, IEEE Student Branch UWU
 - Email: hirushasuhan@outlook.com
 
 ## Skills

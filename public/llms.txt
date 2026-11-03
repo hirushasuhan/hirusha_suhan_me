@@ -6,11 +6,19 @@ Canonical site: https://www.hirushasuhan.me
 
 ## Facts
 - Name: Hirusha Suhan (aliases: Hiru, Hirusha, hirushasuhan)
-- Role: Full-Stack Software Engineer, UI/UX Designer & 3D Web Developer
+- Role: Freelance Full-Stack Developer, Next.js Developer & UI/UX Designer
+- Specialization: Freelance full-stack web platforms, Next.js frontend architectures, and UI/UX design in Sri Lanka
+- Availability: Available for hire (freelance contracts, full-stack projects, Next.js engineering)
 - Country: Sri Lanka
 - University: Uva Wellassa University of Sri Lanka (UWU), Department of Computer Science and Informatics (CSI)
 - Professional Chapters: IEEE Computer Society Uva Wellassa University Student Branch Chapter, IEEE Student Branch UWU
 - Email: hirushasuhan@outlook.com
+
+## Services & Commercial Intent
+- Freelance Full-Stack Developer Sri Lanka: Custom enterprise platforms, REST APIs, and database engineering
+- Hire Next.js Developer: Production Next.js App Router applications, React, TypeScript, high-performance UI
+- UI UX Designer Freelance Sri Lanka: Interactive Figma prototypes, visual branding, modern UI/UX design
+- Full-Stack Developer Portfolio Sri Lanka: Live web applications, open-source software, and interactive 3D WebGL experiences
 
 ## Skills
 - Languages: Java, Python, TypeScript, JavaScript, C / C++, PHP, SQL, Bash

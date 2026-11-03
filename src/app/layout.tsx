@@ -40,6 +40,10 @@ export const metadata: Metadata = {
     "Hirusha",
     "Hiru developer",
     "Hirusha Suhan developer",
+    "freelance full-stack developer Sri Lanka",
+    "hire Next.js developer",
+    "full-stack developer portfolio Sri Lanka",
+    "UI UX designer freelance Sri Lanka",
     "Full-Stack Developer Sri Lanka",
     "Software Engineer Sri Lanka",
     "Web Developer Sri Lanka",
@@ -47,6 +51,9 @@ export const metadata: Metadata = {
     "React Developer",
     "Frontend Developer",
     "Graphic Designer Sri Lanka",
+    "Freelance Next.js Developer",
+    "Hire Full-Stack Developer",
+    "Freelance Web Developer Sri Lanka",
     "Uva Wellassa University",
     "Computer Science and Informatics",
     "Three.js portfolio",
@@ -78,7 +85,7 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/`,
     siteName: `${SITE_NAME} Portfolio`,
     locale: "en_US",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Hirusha Suhan — Full-Stack Developer & Designer" }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Hirusha Suhan — Freelance Full-Stack Developer & Designer Sri Lanka" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -86,7 +93,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     creator: "@hirusha_suhan",
     site: "@hirusha_suhan",
-    images: [{ url: OG_IMAGE, alt: "Hirusha Suhan — Full-Stack Developer & Designer" }],
+    images: [{ url: OG_IMAGE, alt: "Hirusha Suhan — Freelance Full-Stack Developer & Designer Sri Lanka" }],
   },
   robots: {
     index: true,
@@ -105,7 +112,12 @@ export const metadata: Metadata = {
     google: process.env.GOOGLE_SITE_VERIFICATION,
     other: { "msvalidate.01": process.env.BING_SITE_VERIFICATION || "BC62B9DB55CF01F2AC402703F2035573" },
   },
-  other: { "geo.region": "LK", "geo.placename": "Sri Lanka" },
+  other: {
+    "geo.region": "LK",
+    "geo.placename": "Sri Lanka",
+    "geo.position": "7.8731;80.7718",
+    "ICBM": "7.8731, 80.7718",
+  },
 };
 
 // "<" is escaped so the JSON can never close the <script> tag.

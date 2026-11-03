@@ -10,9 +10,9 @@ export const WEBSITE_ID = `${SITE_URL}/#website`;
 export const OG_IMAGE = `${SITE_URL}/og-image.jpg`; // 1200×630
 export const PROFILE_IMAGE = `${SITE_URL}/profile.jpg`; // 800×800, face-centred
 
-export const TITLE = "Hirusha Suhan (Hiru) | Full-Stack Developer & Designer";
+export const TITLE = "Hirusha Suhan | Freelance Full-Stack Developer Sri Lanka";
 export const DESCRIPTION =
-  "Hirusha Suhan (Hiru) is a Sri Lankan full-stack developer & designer. Explore his Next.js, React, Java and Python projects, 3D web work and event designs.";
+  "Portfolio of Hirusha Suhan, freelance full-stack developer & UI/UX designer in Sri Lanka. Hire for Next.js, React, TypeScript, and modern web applications.";
 
 export const SAME_AS = [
   "https://github.com/hirushasuhan",
@@ -61,20 +61,95 @@ const person = {
   "@type": "Person",
   "@id": PERSON_ID,
   name: SITE_NAME,
-  alternateName: ["Hiru", "Hirusha", "hirushasuhan"],
+  alternateName: [
+    "Hiru",
+    "Hirusha",
+    "hirushasuhan",
+    "Hirusha Suhan Sri Lanka",
+    "Freelance Developer Hirusha Suhan",
+  ],
   givenName: "Hirusha",
   familyName: "Suhan",
   url: `${SITE_URL}/`,
   image: PROFILE_IMAGE,
   email: `mailto:${EMAIL}`,
-  jobTitle: "Full-Stack Software Engineer & Designer",
-  hasOccupation: {
-    "@type": "Occupation",
-    name: "Full-Stack Software Engineer & UI/UX Designer",
-    skills: "Next.js, React, TypeScript, Three.js, WebGL, Java, Python, C, MySQL, Relational Database Modeling, UI/UX Design",
-  },
+  jobTitle: [
+    "Freelance Full-Stack Developer",
+    "Next.js Developer",
+    "UI/UX Designer",
+    "Software Engineer",
+  ],
+  hasOccupation: [
+    {
+      "@type": "Occupation",
+      name: "Freelance Full-Stack Developer & Next.js Engineer",
+      occupationLocation: {
+        "@type": "Country",
+        name: "Sri Lanka",
+      },
+      skills:
+        "Next.js, React, TypeScript, Java, Python, C, MySQL, Relational Database Modeling, WebGL, Full-Stack Architecture",
+    },
+    {
+      "@type": "Occupation",
+      name: "Freelance UI/UX & Graphic Designer",
+      occupationLocation: {
+        "@type": "Country",
+        name: "Sri Lanka",
+      },
+      skills:
+        "UI/UX Design, Figma, Visual Branding, Event Posters, Responsive Interface Design",
+    },
+  ],
+  makesOffer: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Freelance Full-Stack Development",
+        serviceType: "Full-Stack Web Development",
+        description:
+          "Custom full-stack web platforms, REST APIs, and scalable software architecture using Next.js, React, TypeScript, and SQL databases.",
+        areaServed: [
+          { "@type": "Country", name: "Sri Lanka" },
+          { "@type": "AdministrativeArea", name: "Worldwide" },
+        ],
+        provider: { "@id": PERSON_ID },
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Hire Next.js Developer Services",
+        serviceType: "Next.js Web Development",
+        description:
+          "Professional Next.js App Router engineering, server components, interactive React interfaces, and high-performance web optimization.",
+        areaServed: [
+          { "@type": "Country", name: "Sri Lanka" },
+          { "@type": "AdministrativeArea", name: "Worldwide" },
+        ],
+        provider: { "@id": PERSON_ID },
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Freelance UI/UX Design Services",
+        serviceType: "UI/UX Design",
+        description:
+          "User experience research, Figma design systems, web & mobile UI design, and visual brand identity.",
+        areaServed: [
+          { "@type": "Country", name: "Sri Lanka" },
+          { "@type": "AdministrativeArea", name: "Worldwide" },
+        ],
+        provider: { "@id": PERSON_ID },
+      },
+    },
+  ],
   description:
-    "Hirusha Suhan (Hiru) is a Sri Lankan full-stack developer and designer, and a Computer Science & Informatics undergraduate at Uva Wellassa University of Sri Lanka.",
+    "Hirusha Suhan (Hiru) is a Sri Lankan freelance full-stack developer and UI/UX designer specializing in Next.js, React, TypeScript, and modern digital platforms.",
   address: { "@type": "PostalAddress", addressCountry: "LK" },
   knowsLanguage: ["en", "si"],
   alumniOf: {
@@ -112,7 +187,9 @@ const person = {
     },
   ],
   knowsAbout: [
-    "Full-stack web development",
+    "Freelance Full-Stack Development",
+    "Hire Next.js Developer",
+    "Full-Stack Web Development",
     "Software Engineering",
     "Next.js",
     "React",
@@ -201,10 +278,35 @@ export function buildJsonLd() {
         "@id": WEBSITE_ID,
         url: `${SITE_URL}/`,
         name: SITE_NAME, // Google "site name": keep short and identical to the brand
-        alternateName: ["Hirusha Suhan Portfolio", "hirushasuhan.me"],
+        alternateName: [
+          "Hirusha Suhan Portfolio",
+          "Hirusha Suhan Developer Portfolio",
+          "Freelance Full-Stack Developer Sri Lanka",
+          "hirushasuhan.me",
+        ],
         description: DESCRIPTION,
         inLanguage: "en",
         publisher: { "@id": PERSON_ID },
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${SITE_URL}/#service`,
+        name: "Hirusha Suhan — Freelance Developer & Designer",
+        url: `${SITE_URL}/`,
+        image: PROFILE_IMAGE,
+        description: DESCRIPTION,
+        address: { "@type": "PostalAddress", addressCountry: "LK" },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: "7.8731",
+          longitude: "80.7718",
+        },
+        areaServed: [
+          { "@type": "Country", name: "Sri Lanka" },
+          { "@type": "AdministrativeArea", name: "Worldwide" },
+        ],
+        founder: { "@id": PERSON_ID },
+        priceRange: "$$",
       },
       {
         "@type": "ProfilePage",

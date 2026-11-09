@@ -17,5 +17,15 @@
       "source": "/(.*)\\.(webp|jpg|jpeg|png|svg|woff2)",
       "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
     }
+  ],
+  "redirects": [
+    { "source": "/about", "destination": "/#about", "permanent": true },
+    { "source": "/projects", "destination": "/#projects", "permanent": true },
+    { "source": "/designs", "destination": "/#designs", "permanent": true },
+    { "source": "/faq", "destination": "/#faq", "permanent": true },
+    { "source": "/contact", "destination": "/#contact", "permanent": true },
+    { "source": "/icon.png", "destination": "/icon-512.png", "permanent": true },
+    { "source": "/cv", "destination": "/Hirusha%20suhan.pdf", "permanent": false },
+    { "source": "/resume", "destination": "/Hirusha%20suhan.pdf", "permanent": false }
   ]
 }
